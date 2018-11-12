@@ -1,0 +1,616 @@
+/* HERMAN JENSEN */
+
+body
+{
+	margin: 0;
+	background-color: rgb(0, 0, 0);
+}
+body *, #wrapper *, .vindmoellewrap *
+{
+	position: absolute;
+}
+
+/* KNAPPER */
+
+h1
+{
+	margin: 0px;
+	width: 100px;
+	text-align: center;
+	font-size: 26px;
+	font-family: sans-serif;
+}
+
+a
+{
+	margin: 0 auto;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+#midtstill
+{
+	position: relative;
+	margin: 0 auto;
+	width: 960px;
+	height: 0;
+}
+
+#hell
+{
+	position: absolute;
+	top:605px;
+	left: 430px;
+	width: 100px;
+	height: 50px;
+	background-color: rgb(255, 0, 0);
+	border: 5px solid rgb(200, 0, 0);
+	border-bottom: 0px;
+	border-radius: 50px 50px 0 0;
+	z-index: 1;
+	-webkit-animation: hellopp 1s ease 4s forwards;
+}
+
+#hell h1
+{
+	margin-top: 10px;
+}
+
+#hellskjuler
+{
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	background-color: rgb(0, 0, 0);
+	top: 600px;
+	z-index: 2;
+}
+
+#heaven
+{
+	position: absolute;
+	top:-55px;
+	left: 430px;
+	width: 100px;
+	height: 50px;
+	background-color: rgb(0, 255, 255);
+	border: 5px solid rgb(0, 200, 200);
+	border-top: 0px;
+	border-radius: 0 0 50px 50px;
+	z-index: 1;
+}
+
+/* HELVETE */
+
+#hell:target
+{
+	-webkit-animation: hellned 1s ease;
+}
+
+#hell:target ~ #heaven
+{
+	-webkit-animation: heavenned 1s ease 3s forwards;
+}
+
+#hell:target ~ #wrapper #bakgrunn
+{
+	background-color: rgb(255, 100, 0);
+	-webkit-transition: all 1s ease 1s;
+}
+
+#hell:target ~ #wrapper .bilsenter .obj .bil
+{
+	-webkit-transform: rotateX(0deg);
+	-webkit-animation: rRotateX 1s linear 1s both;
+}
+
+#hell:target ~ #wrapper .bilsenter .obj .traktorDiv
+{
+	-webkit-transform: rotateX(0deg);
+	-webkit-transition: all 1s linear 2s;
+}
+
+#hell:target ~ #wrapper #klodewrapper .senter .kloden
+{
+	background-color: rgb(255, 0, 0);
+	-webkit-transition: all 1s ease 1s;
+}
+
+#hell:target ~ #wrapper #klodewrapper .senter .strek
+{
+	background-color: rgb(150, 0, 0);
+	-webkit-transition: all 1s ease 1s;
+}
+
+#hell:target ~ #wrapper #himmelwrapper
+{
+	-webkit-animation: ned 2s ease 1s both;
+}
+
+#hell:target ~ #wrapper #helvetewrapper
+{
+	-webkit-animation: opp 2s ease 2s forwards;
+}
+
+#hell:target ~ #wrapper #solwrapper #solen, #hell:target ~ #wrapper #solwrapper #solstrekwrapper
+{
+	-webkit-animation: rRotateX 1s ease;
+}
+
+/* HIMMEL */
+
+#heaven:target
+{
+	-webkit-animation: heavenopp 1s ease;
+}
+
+#heaven:target ~ #wrapper #helvetewrapper
+{
+	-webkit-animation: ned 2s ease;
+}
+
+/* WRAPPERE */
+
+#wrapper
+{
+	width: 960px;
+	height: 600px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+#klodewrapper
+{
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#bakgrunn
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 255, 255);
+	-webkit-transition: all 2s ease;
+}
+
+#himmelwrapper
+{
+	-webkit-animation: opp 2s ease 2s;
+	-webkit-animation-fill-mode: both;
+}
+
+/* ROTASJONER & DIVERSE */
+
+.rotBil
+{
+	-webkit-transform: rotate(-10deg);
+}
+
+.rot22
+{
+	-webkit-transform: rotate(22.5deg);
+}
+
+.rot45
+{
+	-webkit-transform: rotate(45deg);
+}
+
+.rot67
+{
+	-webkit-transform: rotate(67.5deg);
+}
+
+.rot90
+{
+	-webkit-transform: rotate(90deg);
+}
+
+.rot112
+{
+	-webkit-transform: rotate(112.5deg);
+}
+
+.rot135
+{
+	-webkit-transform: rotate(135deg);
+}
+
+.rot157
+{
+	-webkit-transform: rotate(157.5deg);
+}
+
+.rot180
+{
+	-webkit-transform: rotate(180deg);
+}
+
+.rot225
+{
+	-webkit-transform: rotate(225deg);
+}
+
+.rot270
+{
+	-webkit-transform: rotate(270deg);
+}
+
+.rot315
+{
+	-webkit-transform: rotate(315deg);
+}
+
+.speilX
+{
+	-webkit-transform: scaleX(-1);
+}
+
+.speilY
+{
+	-webkit-transform: scaleY(-1);
+}
+
+/* STANDARDKLASSER */
+
+.klodesenter
+{
+	position: absolute;
+	top: 1000px;
+	left: -480px;
+	width: 1920px;
+	height: 1920px;
+}
+
+.bilsenter
+{
+	position: absolute;
+	top: 400px;
+	left: -480px;
+	width: 1920px;
+	height: 1920px;
+}
+
+.senter
+{
+	width: 1920px;
+	height: 1920px;
+}
+
+/* KLODEN */
+
+.kloden
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 1920px;
+	width: 1920px;
+	border-radius: 50%;
+	background-color: rgb(0, 255, 0);
+	-webkit-transition: all 2s ease;
+}
+
+.strek
+{
+	position: absolute;
+	left: 910px;
+	height: 1920px;
+	width: 100px;
+	background-color: rgb(0, 150, 0);
+	-webkit-transition: all 2s ease;
+}
+
+.obj
+{
+	position: absolute;
+	left: 960px;
+	height: 1920px;
+}
+
+/* SOLEN */
+
+#solwrapper
+{
+	position: absolute;
+	top: -100px;
+	left: 860px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	-webkit-animation: rSnurr 30s linear infinite;
+}
+
+#solen
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 200px;
+	width: 200px;
+	border: 10px solid rgb(0, 255, 255);
+	border-radius: 50%;
+	background-color: rgb(255, 255, 0);
+	-webkit-transform: rotateX(90deg);
+	-webkit-animation: rotateX 1s ease 2s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+#solstrekwrapper
+{
+	position: absolute;
+	top: -300px;
+	left: 100px;
+	height: 800px;
+	width: 10px;
+	-webkit-transform: rotateX(90deg);
+	-webkit-animation: rotateX 1s ease 2s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.sol
+{
+	position: absolute;
+	height: 800px;
+	width: 10px;
+	background: -webkit-linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 0, 1), rgba(255, 255, 0, 0));
+}
+
+/* ELEMENTER */
+
+.vm
+{
+	top: -150px;
+	left: -8px;
+}
+
+.blader
+{
+	left: -62px;
+	top: -62px;
+	-webkit-animation: rSnurr 3s linear infinite;
+}
+
+.tre1
+{
+	top: -190px;
+	left: -121px;
+	height: 200px;
+}
+
+.tre2
+{
+	top: -105px;
+	left: -50px;
+	width: 100px;
+}
+
+.sky1
+{
+	top: -375px;
+	left: -150px;
+	width: 300px;
+}
+
+.sky2
+{
+	top: -350px;
+	left: -100px;
+	width: 200px;
+}
+
+.fly
+{
+	-webkit-transform: rotate(-5deg);
+	top: -325px;
+	left: -50px;
+	width: 100px;
+}
+
+.gPigs
+{
+	top: -325px;
+	left: -75px;
+}
+
+.katt
+{
+	top: -300px;
+	left: -34px;
+}
+
+.hillbilly
+{
+	top: -200px;
+	left: -75px;
+}
+
+/* BILEN */
+.bil
+{
+	-webkit-transform: rotateX(90deg);
+	-webkit-animation: rotateX 1s linear 2s both;
+}
+
+.smartCar
+{
+	top: -150px;
+	left: -125px;
+	width: 250px;
+}
+
+.hjul
+{
+	width: 70px;
+	-webkit-animation: rSnurr 1s linear infinite;
+}
+
+.for
+{
+	top: -60px;
+	left: 55px;
+}
+
+.bak
+{
+	top: -60px;
+	left: -125px;
+}
+
+.traktorDiv
+{
+	-webkit-transform: rotateX(90deg);
+	-webkit-transition: all 1s linear 1s;
+}
+
+.traktor
+{
+	top: -150px;
+	left: -125px;
+	width: 250px;
+}
+
+.tForHjul
+{
+	top: -65px;
+	left: 25px;
+	-webkit-animation: rSnurr 1s linear infinite;
+
+}
+
+.tBakHjul
+{
+	top: -90px;
+	left: -127px;
+	-webkit-animation: rSnurr 1.5s linear infinite;
+}
+
+/* ANIMASJONSKLASSER */
+
+.snurr2
+{
+	-webkit-animation: snurr 30s linear;
+}
+.snurr30
+{
+	-webkit-animation: snurr 30s linear infinite;
+}
+
+.snurr45
+{
+	-webkit-animation: snurr 45s linear infinite;
+}
+
+.rSnurr45
+{
+	-webkit-animation: rSnurr 45s linear infinite;
+}
+
+.snurr60
+{
+	-webkit-animation: snurr 75s linear infinite;
+}
+
+.snurr75
+{
+	-webkit-animation: snurr 60s linear infinite;
+}
+
+.snurr90
+{
+	-webkit-animation: rSnurr 90s linear infinite;
+}
+
+.del2
+{
+	-webkit-animation-delay: 2s;
+}
+
+.introsnurr
+{
+	-webkit-animation: start 2s ease 1;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.opp
+{
+	-webkit-animation: opp 2s ease;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/* ANIMASJONER */
+
+@-webkit-keyframes snurr
+{
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(-360deg); }
+}
+
+/* må lage egen animation for reverse fordi det ikke er støttet av safari */
+@-webkit-keyframes rSnurr
+{
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes start
+{
+	from { top: 600px;
+	-webkit-transform: rotate(0deg); }
+	to { top: 400px;
+	-webkit-transform: rotate(-360deg); }
+}
+
+@-webkit-keyframes rotateX
+{
+	from { -webkit-transform: rotateX(90deg); }
+	to { -webkit-transform: rotateX(0deg); }
+}
+
+@-webkit-keyframes rRotateX
+{
+	from { -webkit-transform: rotateX(0deg); }
+	to { -webkit-transform: rotateX(90deg); }
+}
+
+@-webkit-keyframes opp
+{
+	from { top: 1000px; }
+	to { top: 400px;}
+}
+
+@-webkit-keyframes ned
+{
+	from { top: 400px; }
+	to { top: 1000px;}
+}
+
+@-webkit-keyframes hellned
+{
+	from { top: 545px; }
+	to { top: 605px; }
+}
+
+@-webkit-keyframes hellopp
+{
+	from { top: 605px; }
+	to { top: 545px; }
+}
+
+@-webkit-keyframes heavenned
+{
+	from { top: -55px; }
+	to { top: 0px; }
+}
+
+@-webkit-keyframes heavenopp
+{
+	from { top: 0px; }
+	to { top: -55px; }
+}
+
+/* HERMAN JENSEN */
